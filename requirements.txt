@@ -1,0 +1,12 @@
+numpy
+opencv-python
+matplotlib
+numba
+pandas
+Pillow
+tqdm
+torch
+torchvision
+ipywidgets
+jupyter
+streamlit
