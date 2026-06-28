@@ -70,9 +70,27 @@ pip install -r requirements.txt
 ```
 
 ### Dataset
-The dataset should be placed in the `data/circle/` directory. It must contain `train`, `val`, and `test` subdirectories with `.webp` images and corresponding JSON ground truth files.
+The dataset is essential to run the algorithms or the interactive demo. It must be placed in the `data/circle/` directory.
 
-*(Note: If you have a bash environment, you can download the original sample data by extracting it into `data/`)*
+**To download the dataset automatically, run the following commands in the root of the project:**
+
+**Windows (PowerShell):**
+```powershell
+New-Item -ItemType Directory -Force -Path data
+Invoke-WebRequest -Uri "https://www.mimuw.edu.pl/~mw290715/upload/circle.tar.gz" -OutFile "data/circle.tar.gz"
+cd data
+tar -xf circle.tar.gz
+```
+
+**Linux/Mac (Bash):**
+```bash
+mkdir -p data/
+wget -q 'https://www.mimuw.edu.pl/~mw290715/upload/circle.tar.gz' -O data/circle.tar.gz
+cd data/
+tar -xf circle.tar.gz
+```
+
+Alternatively, you can manually download the archive from [this link](https://www.mimuw.edu.pl/~mw290715/upload/circle.tar.gz) and extract its contents inside the `data/` folder.
 
 ### Interactive Demo
 To see the algorithms in action, run the Jupyter Notebook:
