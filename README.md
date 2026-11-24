@@ -1,4 +1,4 @@
-# Eye Circle Detection 👁️
+# Eye Circle Detection
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)
@@ -7,7 +7,7 @@
 A comprehensive computer vision project focused on detecting the center and radius of pupils/irises in images. 
 This project documents the journey from classic computer vision baselines to a highly optimized custom algorithm, and finally, a deep learning approach.
 
-## 📖 Overview
+## Overview
 
 The goal of this project is to accurately locate a circle (representing an eye's pupil/iris) by outputting its coordinates `(cx, cy)` and radius `r`. 
 Throughout the development, multiple pipelines were implemented, compared, and optimized:
@@ -20,7 +20,7 @@ Throughout the development, multiple pipelines were implemented, compared, and o
 ### Visualizing the Algorithms
 ![Algorithm Comparison](algorithm_comparison.png)
 
-## 🏆 Performance Metrics
+## Performance Metrics
 
 Our rigid parameter tuning and robust algorithms yield phenomenal performance on the validation dataset (based on Intersection over Union `IoU >= 0.85` representing a successful detection):
 
@@ -29,7 +29,7 @@ Our rigid parameter tuning and robust algorithms yield phenomenal performance on
 
 These metrics prove the extreme resilience of the algorithms against low lighting, fundus pathologies, and heavy noise.
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 projekt_oczy/
@@ -59,7 +59,7 @@ projekt_oczy/
 └── README.md
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -108,7 +108,7 @@ python -m scripts.train_nn --epochs 30 --batch_size 16
 ```
 This will train the model, validate it against the validation set, plot the learning curves, and save the weights to `efficientnet_eyes.pth`.
 
-## 🧠 Methodology Highlights
+## Methodology Highlights
 
 * **CLAHE & Filtering**: Histogram equalization (CLAHE) combined with Gaussian/Median blurring proved essential for mitigating the natural, noisy structure of the human eye.
 * **Numba FastMath**: The custom scoring function in `gradient.py` is compiled with `@numba.njit` to allow rapid evaluation of thousands of circle candidates in milliseconds.
