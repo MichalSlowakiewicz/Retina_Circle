@@ -114,6 +114,3 @@ This will train the model, validate it against the validation set, plot the lear
 * **Numba FastMath**: The custom scoring function in `gradient.py` is compiled with `@numba.njit` to allow rapid evaluation of thousands of circle candidates in milliseconds.
 * **Two-Phase Search**: The best gradient algorithm uses a two-phase search: a coarse search with large steps (`big_step = 6`), followed by a refined, pixel-perfect search around the best candidate.
 * **Knowledge Distillation (Implicit)**: Training the neural network on the outputs of the CV algorithm effectively distills the complex, slow geometric logic into a fast, fixed-time forward pass.
-
-## 📜 License
-This project is created for educational and portfolio purposes.
